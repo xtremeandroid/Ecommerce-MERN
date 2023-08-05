@@ -16,7 +16,7 @@ import Loader from "../components/Loader";
 import {
   useGetOrderDetailsQuery,
   usePayOrderMutation,
-  useGetPayPalClientIdQuery,
+  useGetPaypalClientIdQuery,
 } from "../slices/ordersApiSlice";
 import { toast } from "react-toastify";
 import React from "react";
@@ -39,7 +39,7 @@ const OrderScreen = () => {
     data: paypal,
     isLoading: loadingPayPal,
     error: errorPayPal,
-  } = useGetPayPalClientIdQuery();
+  } = useGetPaypalClientIdQuery();
 
   const { userInfo } = useSelector((state) => state.auth);
 
